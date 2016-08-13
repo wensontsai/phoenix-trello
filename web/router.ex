@@ -20,6 +20,14 @@ defmodule PhoenixTrello.Router do
     get "*path", PageController, :index
   end
 
+  scope "/api", PhoenixTrello do
+    pipe_through :api
+
+    scope "/v1" do
+      post "/registrations", RegistrationController, :create
+    end
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixTrello do
   #   pipe_through :api
