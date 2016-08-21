@@ -22,4 +22,5 @@ defmodule PhoenixTrello.RegistrationController  do
         |> render("error.json", changeset: changeset)
     end
   end
+  
 end

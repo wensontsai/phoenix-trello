@@ -10,7 +10,7 @@ defmodule PhoenixTrello.SessionController do
 
         conn
         |> put_status(:created)
-        |>render("show.json", jwt: jwt, user: user)
+        |> render("show.json", jwt: jwt, user: user)
 
       :error ->
         conn
