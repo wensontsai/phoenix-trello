@@ -8,7 +8,7 @@ defmodule PhoenixTrello.CurrentUserController do
 
     conn
     |> put_status(:ok)
-    |> render("show.json", user: uyser)
+    |> render("show.json", user: user)
   end
 
 end
